@@ -269,7 +269,7 @@ export default function App() {
 // ══════════════════════════════════════════════════════════════════════════════
 // SIDEBAR
 // ══════════════════════════════════════════════════════════════════════════════
-function SidebarContent({ NavItem, darkMode }: { NavItem: any; darkMode?: boolean }) {
+function SidebarContent({ NavItem }: { NavItem: any }) {
   return (
     <div className="flex flex-col h-full p-4">
       <div className="flex items-center gap-3 mb-6 px-1 pt-2">
@@ -1979,12 +1979,12 @@ function IncidentDrawer({ incident, onClose }: { incident: any; onClose: () => v
             </div>
           </div>
           {incident.summary ? (
-            <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--surface-sunken)', borderColor: 'var(--border)' }} className="p-4">
+            <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--surface-sunken)', borderColor: 'var(--border)' }}>
               <p className="text-[8px] font-black uppercase tracking-[0.2em] text-forest-green mb-2">AI INCIDENT SUMMARY</p>
               <p className="text-xs font-medium text-[var(--text-2)] leading-relaxed italic">&ldquo;{incident.summary}&rdquo;</p>
             </div>
           ) : (
-            <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--surface-sunken)', borderColor: 'var(--border)' }} className="p-4">
+            <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--surface-sunken)', borderColor: 'var(--border)' }}>
               <p className="text-[8px] font-black uppercase tracking-[0.2em] text-forest-green mb-2">AI ANALYSIS</p>
               <p className="text-xs font-medium text-[var(--text-2)] leading-relaxed">Animal detected within the active vehicle corridor. Collision risk elevated due to proximity and vehicle approach rate. Immediate advisory issued to approaching vehicles.</p>
             </div>

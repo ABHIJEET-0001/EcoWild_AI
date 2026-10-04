@@ -216,7 +216,7 @@ export default function App() {
           <div className="absolute left-0 top-0 bottom-0 w-60 border-r transition-colors duration-300"
             style={{ backgroundColor: 'var(--sidebar-bg)', borderColor: 'var(--border)' }}
             onClick={e => e.stopPropagation()}>
-            <SidebarContent NavItem={NavItem} darkMode={darkMode} />
+            <SidebarContent NavItem={NavItem} />
           </div>
         </div>
       )}

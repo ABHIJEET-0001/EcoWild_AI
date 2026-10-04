@@ -9,7 +9,7 @@ import {
   BarChart, Bar, CartesianGrid,
 } from 'recharts';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
+const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:8000').replace(/\/$/, '');
 
 // ─── Animal Emoji ──────────────────────────────────────────────────────────
 const animalEmoji = (species: string) => {
@@ -1471,7 +1471,7 @@ function ImpactView() {
     fetch(`${API_BASE}/intervention-impact`).then(r => r.json()).then(setImpactData).catch(() => setImpactData(fallbackImpact));
   }, []);
 
-  const data = impactData || fallbackImpact;
+  const data = (impactData && impactData.comparison) ? impactData : fallbackImpact;
   const w = data.comparison.without_ai;
   const wi = data.comparison.with_ai;
 

@@ -224,7 +224,7 @@ export default function App() {
       {/* Desktop sidebar — fixed, full height */}
       <aside className="hidden md:flex flex-col fixed left-0 top-0 h-screen w-56 border-r z-40 transition-colors duration-300"
         style={{ backgroundColor: 'var(--sidebar-bg)', borderColor: 'var(--border)', backdropFilter: 'blur(20px)' }}>
-        <SidebarContent NavItem={NavItem} darkMode={darkMode} />
+        <SidebarContent NavItem={NavItem} />
       </aside>
 
       {/* Main scrollable area — offset by sidebar width */}
